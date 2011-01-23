@@ -14,15 +14,15 @@ jQuery.noConflict();
 <body>
 <!--header begin-->
 <div id="header">
-	<div id="Logo"><img src="images/ps_web_h_001.jpg" alt="动力无限" /></div>	
+        <div id="Logo"><img src="images/ps_web_h_001.jpg" alt="动力无限" /></div>
     <!--Nav begin-->
     <div id="Nav">
         <ul>
-        	<li>[</li>
+                <li>[</li>
             <li><a href="index.php" class="selected">首 页</a></li>
             <li><a href="date.php">动力资料</a></li>
             <li><a href="album.php">专辑介绍</a></li>
-            <li><a href="http://bbs.powerstation.org.cn" target="_blank">歌迷论坛</a></li>
+            <li><a href="http://powerstation.sinaapp.com" target="_blank">歌迷论坛</a></li>
             <li><a href="about.php">关于无限</a></li>
             <li>]</li>
         </ul>
@@ -33,17 +33,17 @@ jQuery.noConflict();
 <div id="wrap">
     <!--login begin-->
     <div id="LoginBBS">
-    	<p><img src="images/ps_web_007.gif" width="310" height="20" /></p>
-		<span><img src="images/ps_web_005.gif" width="28" height="50" /></span>
-    	<span class="login">
-        <form action="/bbs/logging.php?action=login&amp;loginsubmit=yes" method="post">
-    	用户名：<input name="username" type="text" class="txt" />
+        <p><img src="images/ps_web_007.gif" width="310" height="20" /></p>
+                <span><img src="images/ps_web_005.gif" width="28" height="50" /></span>
+        <span class="login">
+        <form action="/member.php?mod=logging&action=login&loginsubmit=yes&infloat=yes" method="post">
+        用户名：<input name="username" type="text" class="txt" />
         &nbsp;密码：<input name="password" type="password" class="txt" />
         <input name="loginsubmit" type="submit" style=" background:url(images/ps_web_008.gif) no-repeat; color:#ccc; width:71px; height:20px; border:0; margin-top:1px; vertical-align:middle;" value="" />
-        &nbsp;&nbsp;<a href="/bbs/register.php" target="_blank">论坛注册</a>
-        &nbsp;&nbsp;<a href="/bbs/logging.php?action=login" target="_blank">忘记密码</a>
-        </form></span>        
+        &nbsp;&nbsp;<a href="/member.php?mod=register.php" target="_blank">论坛注册</a>
+        &nbsp;&nbsp;<a href="/member.php?mod=logging&action=login&viewlostpw" target="_blank">忘记密码</a>
+        </form></span>
     </div>
     <!--login end-->
-    
+
 </html>
