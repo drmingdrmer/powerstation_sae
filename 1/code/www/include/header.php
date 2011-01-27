@@ -36,6 +36,10 @@ jQuery.noConflict();
         <p><img src="images/ps_web_007.gif" width="310" height="20" /></p>
                 <span><img src="images/ps_web_005.gif" width="28" height="50" /></span>
         <span class="login">
+<!-- /member.php?mod=logging&action=login&loginsubmit=yes&infloat=yes
+&amp; -->
+<!-- http://powerstation.sinaapp.com/member.php?mod=register.php
+http://powerstation.sinaapp.com/member.php?mod=logging&action=login&viewlostpw -->
         <form action="/member.php?mod=logging&action=login&loginsubmit=yes&infloat=yes" method="post">
         ”√ªß√˚£∫<input name="username" type="text" class="txt" />
         &nbsp;√‹¬Î£∫<input name="password" type="password" class="txt" />

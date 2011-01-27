@@ -61,6 +61,7 @@ a { color: {LINK}; text-decoration: none; }
 /* .z/.y 浮动 left/right */ .z { float: left; } .y { float: right; }
 
 /* 自动闭合浮动 .cl --> Clear */ .cl:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; } .cl { zoom: 1; }
+        .wp .hdc h2 { display:none; }
 
 /* 分隔线 */
 	hr { display: block; clear: both; *margin-top: -8px !important; *margin-bottom: -8px !important; }
@@ -93,7 +94,8 @@ a { color: {LINK}; text-decoration: none; }
 	.xs2 { font-size: 14px !important; }
 	.xs3 { font-size: 16px !important; }
 	/* 颜色 .xg --> text gray level, 1=#999, 2=#666 */
-	.xg1, .xg1 a { color: {LIGHTTEXT} !important; }
+        .xg1 a { color: {LIGHTTEXT} !important; }
+
 	.xg1 .xi2 { color: {HIGHLIGHTLINK} !important; }
 	.xg2 { color: {MIDTEXT}; }
 	/* 加亮颜色 .xi --> text important level, 1=#F60, 2\3=#369 */
@@ -296,7 +298,7 @@ a { color: {LINK}; text-decoration: none; }
 		.pmfl			PM friend list (Window)
 		*/
 
-/* 通用容器，定义页面宽度 */ .wp { margin: 0 auto; width: 960px; } #wp .wp { width: auto; }
+/* 通用容器，定义页面宽度 */ .wp { margin: 0 auto; width: 958px; } #wp .wp { width: auto;} #wp {  background:#fff; border:1px solid #efefef; }
 
 /* 页头 */
 	#hd { margin-bottom: 10px; border-bottom: {HEADERBORDER} solid {SPECIALBORDER}; {HEADERBGCODE} }
@@ -308,6 +310,7 @@ a { color: {LINK}; text-decoration: none; }
 			#hd h2 { padding: 0 20px 8px 0; float: left; }
 				#space #hd h2 { margin-top: 0; }
 			#hd .fastlg { position: absolute; bottom: 8px; right: 0; }
+                        #hd .fastlg .y a.xi2 { color:#efefef; }
 			#scbar { overflow: hidden; height: 36px; line-height: 36px; background: url({IMGDIR}/search.gif) repeat-x 0 0; }
 				#scbar table { background: url({IMGDIR}/search.gif) no-repeat 0 -36px; }
 					#scbar td { padding: 0 2px; white-space: nowrap; }
@@ -364,12 +367,12 @@ a { color: {LINK}; text-decoration: none; }
 	#ct { min-height: 400px; }
 		.ie6 #ct { height: 400px; }
 		.mn { overflow: hidden; }
-		.ct2 .mn { float: left; width: 730px; margin-bottom: 1em; }
+		.ct2 .mn { float: left; width: 720px; padding-left:10px; margin-bottom: 1em; }
 		.ct2 .sd { float: right; width: 220px; overflow: hidden; _overflow-y: visible; }
 
 		.appl { float: left; overflow: hidden; margin-bottom: 10px; padding: 6px 10px; width: 115px; border: 1px solid {COMMONBORDER}; {SIDEBGCODE}; }
 
-		.ct2_a .mn { float: right; width: 810px; }
+		.ct2_a .mn { float: right; width: 800px; padding-left:10px; }
 
 		.ct3_a .mn { float: right; width: 565px; }
 		.ct3_a .sd { float: right; margin-left: 15px; width: 220px; }
@@ -379,8 +382,10 @@ a { color: {LINK}; text-decoration: none; }
 		.mnh { width: 643px; background: {COMMONBG}; margin-bottom: 0; }
 
 /* 页尾 */
-	#ft { padding: 10px 0 50px; border-top: 1px solid {COMMONBORDER}; line-height: 1.8; color: {FOOTERTEXT}; }
+	#ft { padding: 10px 0 50px; width:960px; background:#efefef; border-top: 1px solid {COMMONBORDER}; line-height: 1.8; color:#666; }
 		#flk { text-align: right; }
+                #flk p { padding-right:10px; }
+                #frt p { padding-left:10px; }
 
 /* 通用的区域块 */
 	/*
@@ -393,6 +398,10 @@ a { color: {LINK}; text-decoration: none; }
 	.bm, .bn { margin-bottom: 10px; }
 		.bm { border: 1px solid {COMMONBORDER}; background: {WRAPBG}; }
 			.bm_c { padding: 10px; }
+                        .bm_c table { width:100%; }
+                        .bm_c tr { border-bottom:1px solid #ddd; }
+                        .bm_c td { line-height:23px; padding:0 5px; }
+                        .bm_c td h2 { font-size:14px; font-family:"微软雅黑"; }
 		.drag {}
 		.bm_h .o { float: right; width: 30px; }
 			.bm_h .o img { float: right; margin-top: 11px; cursor: pointer; }
@@ -400,7 +409,7 @@ a { color: {LINK}; text-decoration: none; }
 		.bm_h { padding: 0 10px; height: 31px; border-top: 1px solid #FFF; border-bottom: 1px solid {CONTENTSEPARATE}; background: {COMMONBG}; line-height: 31px; white-space: nowrap; overflow: hidden; }
 		.bmw { border: 1px solid {COMMONBORDER}; }
 			.bmw .bm_h { border-top-color: {WRAPBG}; border-right: 1px solid {WRAPBG}; border-bottom-color: {CONTENTSEPARATE}; border-left: 1px solid {WRAPBG}; background: {SPECIALBG}; }
-				.bmw .bm_h a { color: {HIGHLIGHTLINK}; }
+				.bmw .bm_h a { color: {HIGHLIGHTLINK}; font-size:14px; font-family:"微软雅黑";}
 		.bml .bm_h { padding-top: 5px; border: none; background: transparent; }
 		.bml .bm_c { padding-top: 0; }
 		.bmn { padding: 7px 10px; border-color: {SPECIALBORDER}; background: {SPECIALBG}; }
@@ -549,6 +558,8 @@ a { color: {LINK}; text-decoration: none; }
 			* html .xlda dd img { width: expression(this.width > 550 ? 550 : true); }
 		.xlda dd a { color: {HIGHLIGHTLINK}; }
 		.xlda dd .hot { color: {NOTICETEXT}; }
+
+                
 
 /* 图片列表 */
 .ml {}
@@ -841,14 +852,15 @@ a { color: {LINK}; text-decoration: none; }
 	.lgf a { color: {HIGHLIGHTLINK}; }
 	.minf { margin-top: 23px; }
 #activation_user { font-size: 14px; }
-
+ padding-right:10px;
 /* 快速登录 by Pony */
-.fastlg { width: 60%; line-height: 24px; }
+.fastlg { width: 60%; line-height: 24px; padding-right:10px; }
 	.fastlg p { padding-bottom: 2px; }
-	.fastlg_fm { margin-right: 5px; padding-right: 5px; border-right: 1px solid {COMMONBORDER}; }
+	.fastlg_fm { margin-right: 5px; padding-right: 5px; border-right: 1px solid {COMMONBORDER}; color:#efefef; }
 	.fastlg .px, #ls_more .px { height: 16px; line-height: 16px; font-size: 12px; }
 	.fastlg .pn { height: 22px; line-height: 22px; *line-height: 18px; }
 	.fastlg .ftid { vertical-align: middle; }
+        .fastlg_fm .ftid a#ls_fastloginfield_ctrl { color:#efefef !important; }
 	#ls_fastloginfield_ctrl { vertical-align: middle; border: none; background-color: transparent; }
 	.psw_w { padding-left: 5px; width: 67px; }
 	#ls_more { overflow: hidden; z-index: 300; padding: 10px; width: 152px; line-height: 1.5; border: 1px solid; border-color: {DROPMENUBORDER}; {DROPMENUBGCODE} }
@@ -1172,3 +1184,8 @@ em.hot { position: absolute; left: -2px; top: -2px; text-indent: -9999px; overfl
 .ss em { background: #eee; width: 16px; line-height: 18px; display: block; float: left; margin: 2px; cursor: pointer; padding-left: 7px;}
 	.ss em.a { background: #09f; color: #FFF;}
 .colorwd { margin-left: 2px; width: 22px; height: 22px; border: 1px solid; border-color: #DDD #999 #999 #DDD; vertical-align: middle; }
+
+
+/* my new*/
+p.chart { padding:0 5px; }
+#calendar { background:#efefef; border:1px solid #ddd; }
